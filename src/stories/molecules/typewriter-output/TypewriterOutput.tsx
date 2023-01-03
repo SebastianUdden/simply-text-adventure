@@ -47,7 +47,7 @@ const TypewriterOutput = ({
 
 const Wrapper = styled.div<{ finished?: boolean }>`
   white-space: pre-line;
-  font-size: 18px;
+  font-size: 1.2rem;
   background-color: #000;
   color: #00ff00;
   code {

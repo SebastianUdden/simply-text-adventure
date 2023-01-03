@@ -59,12 +59,14 @@ const Adventure = ({ title, chapters, speedMS }: AdventureProps) => {
 const Wrapper = styled.div`
   background-color: #000;
   color: #00ff00;
-  padding: 10px;
+  padding: 8px;
 `;
 const Body = styled.div`
-  height: 100vh;
   border: 1px solid #00ff00;
-  padding: 50px 10px;
+  box-sizing: border-box;
+  height: 97.5vh;
+  overflow-y: scroll;
+  padding: 30px 1px;
   @media (min-width: 800px) {
     padding: 50px;
     max-width: 800px;
@@ -77,20 +79,21 @@ const Title = styled.h1`
   text-align: center;
   letter-spacing: 4px;
   text-decoration: underline;
+  font-size: 2.5rem;
 `;
 const ChapterTitle = styled.h2`
   text-transform: uppercase;
   margin: 0;
   text-align: center;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 1.2rem;
   letter-spacing: 1px;
 `;
 const Subtitle = styled.h4`
   text-transform: uppercase;
   margin: 0;
   text-align: center;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 200;
   letter-spacing: 5px;
 `;
