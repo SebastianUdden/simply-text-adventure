@@ -1,12 +1,12 @@
 import { Story, Meta } from "@storybook/react";
-import Typewriter from "./Typewriter";
+import Typewriter, { TypeWriterProps } from "./Typewriter";
 
 export default {
   title: "Typewriter",
   component: Typewriter,
 } as Meta;
 
-const Template: Story<{}> = (args) => <Typewriter {...args} />;
+const Template: Story<TypeWriterProps> = (args) => <Typewriter {...args} />;
 export const Default = Template.bind({});
 
 Default.args = {

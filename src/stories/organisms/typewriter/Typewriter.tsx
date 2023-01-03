@@ -3,12 +3,12 @@ import styled from "styled-components";
 import TypewriterInput from "../../molecules/typewriter-input/TypewriterInput";
 import TypewriterOutput from "../../molecules/typewriter-output/TypewriterOutput";
 
-interface Props {
+export interface TypeWriterProps {
   pretext: string;
   submit?: (input: string) => void;
 }
 
-const Typewriter = ({ pretext, submit }: Props) => {
+const Typewriter = ({ pretext, submit }: TypeWriterProps) => {
   const isFirst = useRef<any>(true);
   const ref = useRef<any>();
   const [text, setText] = useState(`\n${pretext}`);

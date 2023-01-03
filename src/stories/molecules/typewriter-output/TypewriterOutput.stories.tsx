@@ -1,12 +1,14 @@
 import { Story, Meta } from "@storybook/react";
-import TypewriterOutput from "./TypewriterOutput";
+import TypewriterOutput, { TypewriterOutputProps } from "./TypewriterOutput";
 
 export default {
   title: "TypewriterOutput",
   component: TypewriterOutput,
 } as Meta;
 
-const Template: Story<{}> = (args) => <TypewriterOutput {...args} />;
+const Template: Story<TypewriterOutputProps> = (args) => (
+  <TypewriterOutput {...args} />
+);
 export const Default = Template.bind({});
 export const LongText = Template.bind({});
 

@@ -8,7 +8,7 @@ export type Option = {
   isNewEventChain?: boolean;
 };
 
-interface Props {
+export interface TypewriterOptionsProps {
   speedMS?: number;
   options: Option[];
   onSelectOption: (option: Option) => void;
@@ -18,7 +18,7 @@ const TypewriterOptions = ({
   speedMS = 50,
   options,
   onSelectOption,
-}: Props) => {
+}: TypewriterOptionsProps) => {
   const [showIndex, setShowIndex] = useState(1);
 
   useEffect(() => {

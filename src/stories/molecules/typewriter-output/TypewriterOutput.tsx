@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-interface Props {
+export interface TypewriterOutputProps {
   text: string;
   speedMS: number;
   skipRerender?: boolean;
@@ -15,7 +15,7 @@ const TypewriterOutput = ({
   skipRerender,
   finished,
   onFinished,
-}: Props) => {
+}: TypewriterOutputProps) => {
   const [visibleText, setVisibleText] = useState("");
   const [count, setCount] = useState(0);
 

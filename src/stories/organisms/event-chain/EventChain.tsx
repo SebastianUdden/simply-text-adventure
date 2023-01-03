@@ -1,15 +1,15 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { Option } from "../../molecules/typewriter-options/TypewriterOptions";
-import Event, { EventProps } from "../event-options/Event";
+import Event, { EventProps } from "../event/Event";
 
-interface Props {
+export interface EventChainProps {
   events: EventProps[];
   speedMS?: number;
   onNewEventChain: (option: Option) => void;
 }
 
-const EventChain = ({ events, speedMS, onNewEventChain }: Props) => {
+const EventChain = ({ events, speedMS, onNewEventChain }: EventChainProps) => {
   const [currentEvent, setCurrentEvent] = useState<EventProps>(events[0]);
   return (
     <Wrapper>

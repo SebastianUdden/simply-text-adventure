@@ -1,4 +1,5 @@
 export const testStory = {
+  speedMS: 50,
   title: "Test Story",
   subtitle: "This is a test",
   chapters: [

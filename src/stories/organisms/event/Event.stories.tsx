@@ -1,14 +1,14 @@
 import { Story, Meta } from "@storybook/react";
 import { useState } from "react";
-import Event from "./Event";
+import Event, { EventProps } from "./Event";
 
 export default {
   title: "Event",
   component: Event,
 } as Meta;
 
-const Template: Story<{}> = (args) => {
-  const [selectedOption, setSelectedOption] = useState("");
+const Template: Story<EventProps> = (args) => {
+  const [selectedOption, setSelectedOption] = useState<any>();
   return (
     <>
       {selectedOption && <p>You {selectedOption.toLowerCase()}</p>}
@@ -21,8 +21,8 @@ export const Default = Template.bind({});
 Default.args = {
   description: "What do you want to do?",
   options: [
-    "Go to the left",
-    "Go to the right",
-    "Scream loudly then stick your head in the sand",
+    { triggerId: "0", text: "Go to the left" },
+    { triggerId: "1", text: "Go to the right" },
+    { triggerId: "2", text: "Do nothing" },
   ],
 };

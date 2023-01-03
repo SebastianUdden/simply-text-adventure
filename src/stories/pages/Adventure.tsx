@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { EventProps } from "../organisms/event-options/Event";
+import { EventProps } from "../organisms/event/Event";
 import EventChain from "../organisms/event-chain/EventChain";
 import { Option } from "../molecules/typewriter-options/TypewriterOptions";
 
