@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { EventProps } from "../organisms/event/Event";
-import EventChain from "../organisms/event-chain/EventChain";
-import { Option } from "../molecules/typewriter-options/TypewriterOptions";
+import { EventProps } from "../../organisms/event/Event";
+import EventChain from "../../organisms/event-chain/EventChain";
+import { Option } from "../../molecules/typewriter-options/TypewriterOptions";
+import { Link } from "react-router-dom";
 
 type Chapter = {
   id: string;
@@ -13,6 +14,7 @@ type Chapter = {
 
 export interface AdventureProps {
   title: string;
+  slug: string;
   chapters?: Chapter[];
   speedMS?: number;
 }
@@ -30,6 +32,7 @@ const Adventure = ({ title, chapters, speedMS }: AdventureProps) => {
   }, [selectedChapter]);
   return (
     <Wrapper>
+      <Arrow to="/">&larr;</Arrow>
       <Body>
         <Title>{title}</Title>
         {selectedChapter && (
@@ -79,7 +82,7 @@ const Title = styled.h1`
   text-align: center;
   letter-spacing: 4px;
   text-decoration: underline;
-  font-size: 2.5rem;
+  font-size: 2rem;
 `;
 const ChapterTitle = styled.h2`
   text-transform: uppercase;
@@ -96,6 +99,16 @@ const Subtitle = styled.h4`
   font-size: 1rem;
   font-weight: 200;
   letter-spacing: 5px;
+`;
+const Arrow = styled(Link)`
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: #000000;
+  font-size: 30px;
+  color: #00ff00;
 `;
 
 export default Adventure;

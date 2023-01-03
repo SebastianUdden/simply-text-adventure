@@ -23,12 +23,17 @@ const EventChain = ({ events, speedMS, onNewEventChain }: EventChainProps) => {
           }
           const newEvent = events.find((e) => e.id === option.triggerId);
           if (newEvent) {
+            const regex = new RegExp(/[.!?']/g);
+            const isSpecialCharacter =
+              option.text[option.text.length - 1].match(regex);
             setCurrentEvent({
               ...newEvent,
               description:
                 option.triggerId === "0"
                   ? newEvent.description
-                  : `You ${option.text.toLowerCase()}. 
+                  : `You ${option.text.toLowerCase()}${
+                      isSpecialCharacter ? "" : "."
+                    }
                   
                   ${newEvent.description}`,
             });

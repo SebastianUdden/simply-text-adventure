@@ -1,8 +1,9 @@
-import { AdventureProps } from "../stories/pages/Adventure";
+import { AdventureProps } from "../stories/pages/adventure/Adventure";
 
 export const BOSS_ADVENTURE: AdventureProps = {
   speedMS: 50,
-  title: "The BOSS adventure",
+  title: "The dubious adventures of Jank the hobgoblin",
+  slug: "the-dubious-adventures-of-jank-the-hobgoblin",
   chapters: [
     {
       id: "0",

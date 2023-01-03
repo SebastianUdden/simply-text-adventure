@@ -1,5 +1,5 @@
 import { Story, Meta } from "@storybook/react";
-import { BOSS_ADVENTURE } from "../../text-adventure-objects/boss-adventure";
+import { BOSS_ADVENTURE } from "../../../text-adventure-objects/boss-adventure";
 import Adventure, { AdventureProps } from "./Adventure";
 
 export default {
