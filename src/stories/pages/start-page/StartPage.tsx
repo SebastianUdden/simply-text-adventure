@@ -62,6 +62,10 @@ const LinkTo = styled(Link)`
   color: #00ff00;
   padding: 10px;
   border-radius: none;
+  :hover {
+    color: #00ff00;
+    background-color: #006600;
+  }
 `;
 
 export default StartPage;

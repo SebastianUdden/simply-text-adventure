@@ -1,0 +1,3 @@
+export const ECONOMY = `Dragon scales are used for magic and tech, the dragons naturally shed their scales once per year. This has led to work on domesticating dragons for resource control as well as systematic hunting and slaughter of dragons for their scales. Butchering a dragon can give access to the five sublayers of scales, leading to a faster but less sustainable way of harvesting scales.
+
+The world economy revolves around the trading of different elemental scales, with water and wind scales being a relatively scarce but consistent resource and fire and earth scales going up and down in demand based on how many dragons of those elements are found and slaughtered.`;

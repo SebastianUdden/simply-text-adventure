@@ -1,7 +1,7 @@
 import { AdventureProps } from "../stories/pages/adventure/Adventure";
 
 export const JANKS_ADVENTURES: AdventureProps = {
-  speedMS: 50,
+  speedMS: 5,
   title: "The dubious adventures of Jank the hobgoblin",
   slug: "the-dubious-adventures-of-jank-the-hobgoblin",
   chapters: [

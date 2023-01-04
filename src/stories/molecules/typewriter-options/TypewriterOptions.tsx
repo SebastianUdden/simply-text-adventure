@@ -52,17 +52,23 @@ const Wrapper = styled.div`
 const Button = styled.button`
   min-width: calc(50% - 20px);
   text-align: left;
-  background-color: #000;
+  background-color: #003300;
   color: #00ff00;
   border: 1px solid #00ff00;
   padding: 15px;
   font-size: 14px;
   cursor: pointer;
-  :hover {
-    background-color: #003000;
+  border-radius: 0;
+  div {
+    background-color: #003300;
     color: #00ff00;
+  }
+  :hover {
+    background-color: #006600;
+    color: #00ff00;
+    border: 1px solid #00ff00;
     div {
-      background-color: #003000;
+      background-color: #006600;
       color: #00ff00;
     }
   }

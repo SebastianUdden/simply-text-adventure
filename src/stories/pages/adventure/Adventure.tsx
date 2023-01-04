@@ -32,8 +32,8 @@ const Adventure = ({ title, chapters, speedMS }: AdventureProps) => {
   }, [selectedChapter]);
   return (
     <Wrapper>
-      <Arrow to="/">&larr;</Arrow>
       <Body>
+        <Arrow to="/">&larr;</Arrow>
         <Title>{title}</Title>
         {selectedChapter && (
           <>
@@ -65,6 +65,7 @@ const Wrapper = styled.div`
   padding: 8px;
 `;
 const Body = styled.div`
+  position: relative;
   border: 1px solid #00ff00;
   box-sizing: border-box;
   height: 97.5vh;
@@ -102,13 +103,16 @@ const Subtitle = styled.h4`
 `;
 const Arrow = styled(Link)`
   position: absolute;
-  top: 9px;
+  top: 0px;
   left: 10px;
   right: 10px;
-  padding: 5px 10px;
+  padding: 3px 5px;
   background-color: #000000;
   font-size: 30px;
   color: #00ff00;
+  :hover {
+    color: #006600;
+  }
 `;
 
 export default Adventure;
