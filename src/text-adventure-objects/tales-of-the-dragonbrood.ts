@@ -7,6 +7,29 @@ export const TALES_OF_THE_DRAGONBROOD: AdventureProps = {
   chapters: [
     {
       id: "0",
+      title: "Menu",
+      subtitle: "Select a chapter",
+      events: [
+        {
+          id: "0",
+          description: ``,
+          options: [
+            {
+              triggerId: "1",
+              text: "Chapter 1 - Jair",
+              isNewEventChain: true,
+            },
+            {
+              triggerId: "2",
+              text: "Chapter 2 - Alaya",
+              isNewEventChain: true,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "1",
       title: "Chapter 1",
       subtitle: "Jair",
       events: [
@@ -21,8 +44,13 @@ export const TALES_OF_THE_DRAGONBROOD: AdventureProps = {
           He stepped onto the bridge, humming along with the everwinds..`,
           options: [
             {
-              triggerId: "1",
+              triggerId: "2",
               text: "Next chapter",
+              isNewEventChain: true,
+            },
+            {
+              triggerId: "0",
+              text: "Go to menu",
               isNewEventChain: true,
             },
           ],
@@ -30,7 +58,7 @@ export const TALES_OF_THE_DRAGONBROOD: AdventureProps = {
       ],
     },
     {
-      id: "1",
+      id: "2",
       title: "Chapter 2",
       subtitle: "Alaya",
       events: [
@@ -49,8 +77,13 @@ export const TALES_OF_THE_DRAGONBROOD: AdventureProps = {
           'One day I’ll show him, one day I’ll sign the Wind and fly away from this place!'`,
           options: [
             {
-              triggerId: "0",
+              triggerId: "1",
               text: "Go back",
+              isNewEventChain: true,
+            },
+            {
+              triggerId: "0",
+              text: "Go to menu",
               isNewEventChain: true,
             },
           ],
