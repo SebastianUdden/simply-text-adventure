@@ -1,5 +1,5 @@
 import { Story, Meta } from "@storybook/react";
-import { BOSS_ADVENTURE } from "../../../text-adventure-objects/janks-adventures";
+import { JANKS_ADVENTURES } from "../../../text-adventure-objects/janks-adventures";
 import Adventure, { AdventureProps } from "./Adventure";
 
 export default {
@@ -10,4 +10,4 @@ export default {
 const Template: Story<AdventureProps> = (args) => <Adventure {...args} />;
 
 export const Default = Template.bind({});
-Default.args = BOSS_ADVENTURE;
+Default.args = JANKS_ADVENTURES;
